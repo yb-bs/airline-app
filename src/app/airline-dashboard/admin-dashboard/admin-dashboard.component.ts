@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -8,6 +9,11 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
   styleUrls: ['./admin-dashboard.component.scss']
 })
 export class AdminDashboardComponent {
+
+  flights: string[] = ['', '', '', '', ''];
+
+  displayedColumns = ["pnr", "airline", "from", "to", "depTime", "arrTime", "ancillaryServices", "passengers"];
+
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {

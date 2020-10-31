@@ -1,6 +1,10 @@
+import { Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
-export type Role = 'Admin' | 'FlightStaff'
+export type Role = 'Admin' | 'FlightStaff';
+export type SocialMedia = 'Google' | 'Facebook' | 'Twitter';
+export type User = { username: string, socialMedia: SocialMedia, role: Role }
+export type Flight = { pnr: string, airline: string, from: string, to: string, depTime: Time, arrTime: Time};
 
 @Component({
   selector: 'app-airline-dashboard',
@@ -9,6 +13,7 @@ export type Role = 'Admin' | 'FlightStaff'
 })
 export class AirlineDashboardComponent {
   userRole: Role = 'Admin';
+  passengers: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
 
   get showAdminDashboard() {
     return this.userRole ==='Admin';

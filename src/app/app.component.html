@@ -1,15 +1,15 @@
-<div fxLayout='column' class="zero">
-
-  <div fxFlex="33" [fxFlex.md]="box1Width" class="one" ></div>
-  <div fxFlex="33" [fxLayout]="direction" fxLayout.md="row" class="two">
-
-    <app-airline-dashboard></app-airline-dashboard>
-
-    <div fxFlex="22"    fxFlex.md="10px" fxHide.lg                       class="two_one"></div>
-    <div fxFlex="205px" fxFlex.md="65"                                    class="two_two"></div>
-    <div fxFlex="30px"  fxFlex.md="25"   fxShow [fxHide.md]="hideBox"   class="two_three"></div>
-
-  </div>
-  <div fxFlex class="three"></div>
-
-</div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Yummy Lava airlines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" sizes="192x192" href="https://material.io/static/images/simple-lp/favicons/components-192x192.png">
+    <link rel="shortcut icon" href="https://material.io/static/images/simple-lp/favicons/components-72x72.png">
+  </head>
+  <body class="mat-body">
+    <div fxLayout='column' class="zero">
+      <app-airline-dashboard class="mat-app-background"></app-airline-dashboard>
+    </div>
+  </body>
+</html>

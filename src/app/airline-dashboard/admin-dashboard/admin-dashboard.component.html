@@ -1,24 +1,54 @@
+<!-- <link href="node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet"> -->
 <div class="grid-container">
   <h1 class="mat-h1">Admin Dashboard</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div class="mat-body">
+
+    <mat-table [dataSource]="dataSource">
+  
+      <ng-container matColumnDef="pnr">
+          <mat-header-cell *matHeaderCellDef>PNR</mat-header-cell>
+          <mat-cell *matCellDef="let flight">{{flight.pnr}}</mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="airline">
+          <mat-header-cell *matHeaderCellDef>Airline</mat-header-cell>
+          <mat-cell *matCellDef="let flight">{{flight.airline}}</mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="from">
+          <mat-header-cell *matHeaderCellDef>From</mat-header-cell>
+          <mat-cell *matCellDef="let flight">{{flight.from}}</mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="to">
+          <mat-header-cell *matHeaderCellDef>To</mat-header-cell>
+          <mat-cell *matCellDef="let flight">{{flight.to}}</mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="depTime">
+          <mat-header-cell *matHeaderCellDef>Departure Time</mat-header-cell>
+          <mat-cell *matCellDef="let flight">{{flight.depTime}}</mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="arrTime">
+          <mat-header-cell *matHeaderCellDef>Arrival Time</mat-header-cell>
+          <mat-cell *matCellDef="let flight">{{flight.arrTime}}</mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="ancillaryServices">
+          <mat-header-cell *matHeaderCellDef>Ancillary Services</mat-header-cell>
+          <mat-cell *matCellDef="let flight"><button>Manage</button></mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="passengers">
+          <mat-header-cell *matHeaderCellDef>Passengers</mat-header-cell>
+          <mat-cell *matCellDef="let flight"><button>Manage</button></mat-cell>
+      </ng-container>
+      
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      
+  </mat-table>
+  </div>
 </div>
