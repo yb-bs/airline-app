@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'airline-app';
+  box1Width = "90%";
+  direction = "column";
+  hideBox = false;
 }
