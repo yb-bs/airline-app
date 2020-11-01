@@ -17,6 +17,8 @@ import { FlightService } from '../services/flight.service';
 })
 export class AirlineDashboardComponent implements OnInit {
   
+  userRole: Role = Role.FlightStaff;
+
   constructor(private flightService: FlightService) {
 
   }
@@ -30,8 +32,6 @@ export class AirlineDashboardComponent implements OnInit {
       map(flights => flights)
     );
   }
-
-  userRole: Role = Role.Admin;
 
   get showAdminDashboard() {
     return this.userRole === Role.Admin;

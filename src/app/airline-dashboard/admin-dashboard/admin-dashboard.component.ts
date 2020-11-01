@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { AirlineDashboardComponent } from '../airline-dashboard.component';
 import { Airline } from 'src/app/model/airline.enum';
 import { Airport } from 'src/app/model/airport.enum';
 import { AncillaryService } from 'src/app/model/ancillaryservice.enum';
@@ -17,8 +16,6 @@ import { Flight } from 'src/app/model/flight.model';
 export class AdminDashboardComponent {
 
   displayedColumns = ["pnr", "airline", "from", "to", "depTime", "arrTime", "ancillaryServices", "passengers"];
-
-  // flights : Flight[] = AdminDashboardComponent.getFlightDetails();
 
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
@@ -42,8 +39,6 @@ export class AdminDashboardComponent {
   );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
-
-  
 
   flights: Flight[] = [
     // Flight 1
