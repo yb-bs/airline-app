@@ -38,6 +38,36 @@ export class AdminDashboardComponent {
     })
   );
 
+  loadFlightDetails = true;
+  loadManagePassengersComponent = false;
+  loadManageServicesComponent = false;
+
+  managePassengers(flight: Flight, event: Event) {
+    this.loadFlightDetails = false;
+    this.loadManagePassengersComponent = true;
+    this.loadManageServicesComponent = false;
+  }
+
+  manageAncillaryServices(flight: Flight, event: Event) {
+    this.loadFlightDetails = false;
+    this.loadManagePassengersComponent = false;
+    this.loadManageServicesComponent = true;
+    console.log(event);
+    console.log(flight);
+    console.log(this.flights.indexOf(flight));
+  }
+
+  adminHome() {
+    this.loadFlightDetails = true;
+    this.loadManagePassengersComponent = false;
+    this.loadManageServicesComponent = false;
+  }
+
+  updateFlightPassengers(originalFlightData: Flight, updatedFlightData:Flight) {
+    let index = this.flights.indexOf(originalFlightData);
+    this.flights[index] = updatedFlightData;
+  }
+
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   flights: Flight[] = [

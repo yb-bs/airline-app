@@ -22,6 +22,10 @@ import { MatListModule } from "@angular/material/list";
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatTableModule } from '@angular/material/table';
 import { FlightService } from './services/flight.service';
+import { ManagePassengersComponent } from './airline-dashboard/admin-dashboard/manage-passengers/manage-passengers.component';
+import { ManageServicesComponent } from './airline-dashboard/admin-dashboard/manage-services/manage-services.component';
+import { CheckinComponent } from './airline-dashboard/flightstaff-dashboard/checkin/checkin.component';
+import { InflightComponent } from './airline-dashboard/flightstaff-dashboard/inflight/inflight.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { FlightService } from './services/flight.service';
     LoginComponent,
     AirlineDashboardComponent,
     AdminDashboardComponent,
-    FlightstaffDashboardComponent
+    FlightstaffDashboardComponent,
+    ManagePassengersComponent,
+    ManageServicesComponent,
+    CheckinComponent,
+    InflightComponent
   ],
   imports: [
     BrowserModule,

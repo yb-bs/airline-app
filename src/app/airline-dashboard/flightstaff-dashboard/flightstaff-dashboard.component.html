@@ -33,7 +33,7 @@
     </div> -->
 
     <!-- <mat-table [dataSource]="flights$"> -->
-    <mat-table [dataSource]="getFlightDetails">
+    <mat-table [dataSource]="getFlightDetails" *ngIf= 'loadFlightDetails'>
   
       <ng-container matColumnDef="pnr">
           <mat-header-cell *matHeaderCellDef>PNR</mat-header-cell>
@@ -66,26 +66,26 @@
       </ng-container>
     
       <ng-container matColumnDef="ancillaryServices">
-          <mat-header-cell *matHeaderCellDef>Ancillary Services</mat-header-cell>
+          <mat-header-cell *matHeaderCellDef>Check In</mat-header-cell>
           <mat-cell *matCellDef="let flight">
-              <button class="mdc-button">
+              <button class="mdc-button" (click)="checkIn(flight, $event);">
                 <div class="mdc-button__ripple">
                 <svg class="mdc-button__icon" aria-hidden="true" xmlns width="24" height="24" fill-rule="evenodd" xmlns:v="https://vecta.io/nano"><path d="M13.777 19.5l-.466 1.74L.742 17.85A1 1 0 0 1 0 16.886l.035-.26L2.882 6a1 1 0 0 1 1.224-.707l12.57 3.37-.473 1.768.965.262.474-1.772 5.613 1.5a1 1 0 0 1 .741.966l-.034.26-2.847 10.6c-.12.446-.525.74-.966.74l-.26-.034-5.613-1.478.465-1.736-.965-.262zm5.665 1.3l.26-.966-2.716-.717-.26.966 2.716.717zm-5.406-2.267l.965.26.444-1.658-.965-.262-.444 1.66zM5.13 13.74l2.594-1.037-2.384-2.386L6.16 10l4.03 1.727 2.055-.822c.542-.22 1.4-.08 1.563.33l.028.215c-.034.403-.48.917-.932 1.1l-2.057.822-1.727 4.03-.823.33.083-3.372-2.594 1.038-.614 1.2-.575.23-.044-1.9-1.27-1.4.575-.23 1.27.446zm15.35 3.186l.26-.966-2.717-.717-.26.966 2.717.717zM14.74 15.9l.965.262.503-1.876-.965-.26-.503 1.875zm6.257-.904l.26-.966-2.717-.717-.26.966 2.717.717zM15.5 13.058l.964.26.445-1.66-.965-.26-.444 1.66zm6.012.005l.26-.966-2.717-.716-.258.965 2.716.717zM7.43 4.382l12.528-3.348.26-.034a1 1 0 0 1 .966.741l1.833 6.828L7.43 4.382z"/>
                 </svg>
-                <span class="mdc-button__label">  Check In</span>
+                <span class="mdc-button__label">   Check In</span>
                 </div>
               </button>
            </mat-cell>
       </ng-container>
     
       <ng-container matColumnDef="passengers">
-          <mat-header-cell *matHeaderCellDef>Passengers</mat-header-cell>
+          <mat-header-cell *matHeaderCellDef>In flight</mat-header-cell>
           <mat-cell *matCellDef="let flight">
-            <button class="mdc-button">
+            <button class="mdc-button" (click)="inFlight(flight, $event);">
               <div class="mdc-button__ripple">
-              <svg class="mdc-button__icon" aria-hidden="true" xmlns width="24" height="24" fill-rule="evenodd" xmlns:v="https://vecta.io/nano"><path d="M20 18v2H0v-2h20zM.01 11.574l2.624-1.5L7.4 11.89 19.173 4.85c2.226-1.312 4.268-.853 4.647-.216.448.753.13 2.366-2.576 4.1L12.01 14.58c-4.97 2.708-7.565.657-7.565.657L.01 11.574zm5.587-6.62L3 6.453l6.252 3.173L14.64 6.4 5.598 4.953z"/>
+              <svg class="mdc-button__icon" aria-hidden="true" xmlns width="24" height="24" fill-rule="evenodd" xmlns:v="https://vecta.io/nano"><path d="M3.69 10H10L7 3h2l7 7h5c1.322-.007 3 1.002 3 2s-1.7 1.993-3 2h-5l-7 7H7l3-7H3.69L1.4 16H0l1.49-4L0 8h1.4l2.292 2"/>
               </svg>
-              <span class="mdc-button__label">  In flight</span>
+              <span class="mdc-button__label">   In flight</span>
               </div>
             </button>
          </mat-cell>
@@ -96,5 +96,18 @@
       <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
       
   </mat-table>
+  <div *ngIf= 'loadCheckInComponent'>
+    <app-checkin></app-checkin>
+  </div>
+  <div *ngIf= 'loadInFlightComponent'>
+    <app-inflight></app-inflight>
+  </div>
+  <div *ngIf= '!loadFlightDetails' class="mdc-touch-target-wrapper">
+    <button class="mdc-button mdc-button--touch" (click)="adminHome();">
+      <div class="mdc-button__ripple"></div>
+      <span class="mdc-button__label">Back to Admin home</span>
+      <div class="mdc-button__touch"></div>
+    </button>
+  </div>
   </div>
 </div>

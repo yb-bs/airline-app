@@ -38,6 +38,33 @@ export class FlightstaffDashboardComponent {
     })
   );
 
+  loadFlightDetails = true;
+  loadCheckInComponent = false;
+  loadInFlightComponent = false;
+
+  adminHome() {
+    this.loadFlightDetails = true;
+    this.loadCheckInComponent = false;
+    this.loadInFlightComponent = false;
+  }
+
+  checkIn(flight: Flight, event: Event) {
+    this.loadFlightDetails = false;
+    this.loadCheckInComponent = true;
+    this.loadInFlightComponent = false;
+  }
+
+  inFlight(flight: Flight, event: Event) {
+    this.loadFlightDetails = false;
+    this.loadCheckInComponent = false;
+    this.loadInFlightComponent = true;
+  }
+
+  updateFlightPassengers(originalFlightData: Flight, updatedFlightData:Flight) {
+    let index = this.flights.indexOf(originalFlightData);
+    this.flights[index] = updatedFlightData;
+  }
+
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   flights: Flight[] = [

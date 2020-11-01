@@ -17,6 +17,7 @@ import { FlightService } from '../services/flight.service';
 })
 export class AirlineDashboardComponent implements OnInit {
   
+  // userRole: Role = Role.Admin;
   userRole: Role = Role.FlightStaff;
 
   constructor(private flightService: FlightService) {
