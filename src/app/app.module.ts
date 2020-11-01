@@ -21,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from "@angular/material/list";
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatTableModule } from '@angular/material/table';
+import { FlightService } from './services/flight.service';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule
   ],
   providers: [
+    FlightService,
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {

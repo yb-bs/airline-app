@@ -3,7 +3,11 @@
   <h1 class="mat-h1">Admin Dashboard</h1>
   <div class="mat-body">
 
-    <mat-table [dataSource]="dataSource">
+    <!-- <div class="spinner-container" *ngIf="dataSource.loading$ | async">
+        <mat-spinner></mat-spinner>
+    </div> -->
+
+    <mat-table [dataSource]="getFlightDetails">
   
       <ng-container matColumnDef="pnr">
           <mat-header-cell *matHeaderCellDef>PNR</mat-header-cell>
@@ -27,12 +31,12 @@
     
       <ng-container matColumnDef="depTime">
           <mat-header-cell *matHeaderCellDef>Departure Time</mat-header-cell>
-          <mat-cell *matCellDef="let flight">{{flight.depTime}}</mat-cell>
+          <mat-cell *matCellDef="let flight">{{flight.depTime.hours}}:{{flight.depTime.minutes}}</mat-cell>
       </ng-container>
     
       <ng-container matColumnDef="arrTime">
           <mat-header-cell *matHeaderCellDef>Arrival Time</mat-header-cell>
-          <mat-cell *matCellDef="let flight">{{flight.arrTime}}</mat-cell>
+          <mat-cell *matCellDef="let flight">{{flight.arrTime.hours}}:{{flight.arrTime.minutes}}</mat-cell>
       </ng-container>
     
       <ng-container matColumnDef="ancillaryServices">
