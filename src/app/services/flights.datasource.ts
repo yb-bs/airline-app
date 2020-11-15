@@ -29,6 +29,6 @@ export class FlightsDataSource implements DataSource<Flight> {
             catchError(() => of([])),
             finalize(() => this.loadingSubject.next(false))
         )
-        .subscribe(flights => this.flightsSubject.next(flights));
+        // .subscribe(flights => this.flightsSubject.next(flights));
     }
 }

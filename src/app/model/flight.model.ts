@@ -7,6 +7,7 @@ import { SpecialMeal } from './specialmeal.enum';
 import { Passenger } from './passenger.model';
 
 export interface Flight {
+    // id: number,
     pnr: string, 
     airline: Airline, 
     from: Airport, 

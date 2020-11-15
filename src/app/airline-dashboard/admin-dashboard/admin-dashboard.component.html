@@ -6,8 +6,9 @@
         <mat-spinner></mat-spinner>
     </div> -->
 
+    <!-- <mat-spinner *ngIf="flights.length === 0"></mat-spinner> -->
     <!-- <mat-table [dataSource]="flights$"> -->
-    <mat-table [dataSource]="getFlightDetails"  *ngIf= 'loadFlightDetails'>
+    <mat-table [dataSource]="getFlightDetails" *ngIf= 'loadFlightDetails'>
   
       <ng-container matColumnDef="pnr">
           <mat-header-cell *matHeaderCellDef>PNR</mat-header-cell>
@@ -82,6 +83,7 @@
       <span class="mdc-button__label">Back to Admin home</span>
       <div class="mdc-button__touch"></div>
     </button>
+    <button mat-button routerLink="/">Back to Admin home</button>
   </div>
   </div>
 </div>

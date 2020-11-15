@@ -26,6 +26,9 @@ import { ManagePassengersComponent } from './airline-dashboard/admin-dashboard/m
 import { ManageServicesComponent } from './airline-dashboard/admin-dashboard/manage-services/manage-services.component';
 import { CheckinComponent } from './airline-dashboard/flightstaff-dashboard/checkin/checkin.component';
 import { InflightComponent } from './airline-dashboard/flightstaff-dashboard/inflight/inflight.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,7 @@ import { InflightComponent } from './airline-dashboard/flightstaff-dashboard/inf
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FlexLayoutModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
@@ -53,7 +57,8 @@ import { InflightComponent } from './airline-dashboard/flightstaff-dashboard/inf
     MatButtonModule,
     LayoutModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     FlightService,

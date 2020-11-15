@@ -2,7 +2,7 @@
 @use "@material/data-table/data-table";
 @use '@material/button';
 
-@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 // @include button.core-styles;
 @include data-table.core-styles;

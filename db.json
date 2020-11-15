@@ -1,0 +1,480 @@
+{
+    "airlines": [
+        {
+            "id": 1,
+            "name": "Indigo"
+        },
+        {
+            "id": 2,
+            "name": "Air Asia"
+        },
+        {
+            "id": 3,
+            "name": "Air India"
+        }
+    ],
+    "airports": [
+        {
+            "id": 1,
+            "name": "KUL"
+        },
+        {
+            "id": 2,
+            "name": "BLR"
+        }
+    ],
+    "ancillaryServices": [
+        {
+            "id": 1,
+            "asName": "Cardiac monitoring"
+        },
+        {
+            "id": 2,
+            "asName": "Wound care services"
+        }
+    ],
+    "specialMeals": [
+        {
+            "id": 1,
+            "mealName": "Vegan"
+        },
+        {
+            "id": 2,
+            "mealName": "Gluten free"
+        }
+    ],
+    "shopItems": [
+        {
+            "id": 1,
+            "itemName": "Card pack"
+        },
+        {
+            "id": 2,
+            "itemName": "Fragrances"
+        },
+        {
+            "id": 3,
+            "itemName": "Mask"
+        },
+        {
+            "id": 4,
+            "itemName": "Watch"
+        }
+    ],
+    "flights": [
+        {
+            "id": 1,
+            "pnr": "ABC123",
+            "airlineId": 1,
+            "airportFrom": 2,
+            "airportTo": 1,
+            "depTime": {
+                "hours": 11,
+                "minutes": 30
+            },
+            "arrTime": {
+                "hours": 15,
+                "minutes": 55
+            },
+            "ancillaryServices": [
+                1,
+                2
+            ],
+            "specialMeals": [
+                1,
+                2
+            ],
+            "shopItems": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "passengers": [
+                {
+                    "name": "Passenger1",
+                    "passport": "A1234567",
+                    "address": "Address1",
+                    "seat": "3A",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [
+                        1
+                    ],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger2",
+                    "passport": "B1234567",
+                    "address": "Address2",
+                    "seat": "5C",
+                    "checkedIn": true,
+                    "wheelchair": true,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger3",
+                    "passport": "C1234567",
+                    "address": "Address3",
+                    "seat": "4F",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "pnr": "DEF456",
+            "airlineId": 1,
+            "airportFrom": 1,
+            "airportTo": 2,
+            "depTime": {
+                "hours": 11,
+                "minutes": 30
+            },
+            "arrTime": {
+                "hours": 15,
+                "minutes": 55
+            },
+            "ancillaryServices": [
+                1,
+                2
+            ],
+            "specialMeals": [
+                1,
+                2
+            ],
+            "shopItems": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "passengers": [
+                {
+                    "name": "Passenger1",
+                    "passport": "A1234567",
+                    "address": "Address1",
+                    "seat": "3A",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [
+                        1
+                    ],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger2",
+                    "passport": "B1234567",
+                    "address": "Address2",
+                    "seat": "5C",
+                    "checkedIn": true,
+                    "wheelchair": true,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger3",
+                    "passport": "C1234567",
+                    "address": "Address3",
+                    "seat": "4F",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "pnr": "GHI789",
+            "airlineId": 2,
+            "airportFrom": 2,
+            "airportTo": 1,
+            "depTime": {
+                "hours": 11,
+                "minutes": 30
+            },
+            "arrTime": {
+                "hours": 15,
+                "minutes": 55
+            },
+            "ancillaryServices": [
+                1,
+                2
+            ],
+            "specialMeals": [
+                1,
+                2
+            ],
+            "shopItems": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "passengers": [
+                {
+                    "name": "Passenger1",
+                    "passport": "A1234567",
+                    "address": "Address1",
+                    "seat": "3A",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [
+                        1
+                    ],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger2",
+                    "passport": "B1234567",
+                    "address": "Address2",
+                    "seat": "5C",
+                    "checkedIn": true,
+                    "wheelchair": true,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger3",
+                    "passport": "C1234567",
+                    "address": "Address3",
+                    "seat": "4F",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "pnr": "JKL123",
+            "airlineId": 2,
+            "airportFrom": 1,
+            "airportTo": 2,
+            "depTime": {
+                "hours": 11,
+                "minutes": 30
+            },
+            "arrTime": {
+                "hours": 15,
+                "minutes": 55
+            },
+            "ancillaryServices": [
+                1,
+                2
+            ],
+            "specialMeals": [
+                1,
+                2
+            ],
+            "shopItems": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "passengers": [
+                {
+                    "name": "Passenger1",
+                    "passport": "A1234567",
+                    "address": "Address1",
+                    "seat": "3A",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [
+                        1
+                    ],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger2",
+                    "passport": "B1234567",
+                    "address": "Address2",
+                    "seat": "5C",
+                    "checkedIn": true,
+                    "wheelchair": true,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger3",
+                    "passport": "C1234567",
+                    "address": "Address3",
+                    "seat": "4F",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "pnr": "MNO456",
+            "airlineId": 3,
+            "airportFrom": 2,
+            "airportTo": 1,
+            "depTime": {
+                "hours": 11,
+                "minutes": 30
+            },
+            "arrTime": {
+                "hours": 15,
+                "minutes": 55
+            },
+            "ancillaryServices": [
+                1,
+                2
+            ],
+            "specialMeals": [
+                1,
+                2
+            ],
+            "shopItems": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "passengers": [
+                {
+                    "name": "Passenger1",
+                    "passport": "A1234567",
+                    "address": "Address1",
+                    "seat": "3A",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [
+                        1
+                    ],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger2",
+                    "passport": "B1234567",
+                    "address": "Address2",
+                    "seat": "5C",
+                    "checkedIn": true,
+                    "wheelchair": true,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger3",
+                    "passport": "C1234567",
+                    "address": "Address3",
+                    "seat": "4F",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "pnr": "PQR789",
+            "airlineId": 3,
+            "airportFrom": 1,
+            "airportTo": 2,
+            "depTime": {
+                "hours": 11,
+                "minutes": 30
+            },
+            "arrTime": {
+                "hours": 15,
+                "minutes": 55
+            },
+            "ancillaryServices": [
+                1,
+                2
+            ],
+            "specialMeals": [
+                1,
+                2
+            ],
+            "shopItems": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "passengers": [
+                {
+                    "name": "Passenger1",
+                    "passport": "A1234567",
+                    "address": "Address1",
+                    "seat": "3A",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [
+                        1
+                    ],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger2",
+                    "passport": "B1234567",
+                    "address": "Address2",
+                    "seat": "5C",
+                    "checkedIn": true,
+                    "wheelchair": true,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                },
+                {
+                    "name": "Passenger3",
+                    "passport": "C1234567",
+                    "address": "Address3",
+                    "seat": "4F",
+                    "checkedIn": false,
+                    "wheelchair": false,
+                    "infant": false,
+                    "ancillaryServices": [],
+                    "specialMeals": [],
+                    "shopItems": []
+                }
+            ]
+        }
+    ]
+}
