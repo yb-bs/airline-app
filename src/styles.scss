@@ -2,7 +2,8 @@
 @use "@material/data-table/data-table";
 @use '@material/button';
 
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+// @import '~@angular/material/prebuilt-themes/purple-green.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 // @include button.core-styles;
 @include data-table.core-styles;
@@ -10,3 +11,4 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-cell { padding: 1px;}

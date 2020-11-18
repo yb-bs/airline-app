@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { Airline } from 'src/app/model/airline.model';
@@ -16,6 +16,12 @@ import { Flight } from 'src/app/model/flight.model';
 export class FlightstaffDashboardComponent {
 
   displayedColumns = ["pnr", "airline", "from", "to", "depTime", "arrTime", "ancillaryServices", "passengers"];
+
+  @Input() getFlightDetails : Function;
+
+  get getFlights() {
+   return this.getFlightDetails();
+  }
 
   /** Based on the screen size, switch from standard to one column per row */
   // cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(

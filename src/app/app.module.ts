@@ -1,64 +1,66 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
-import { GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
-import { LoginComponent } from './login/login.component';
-import { AirlineDashboardComponent } from './airline-dashboard/airline-dashboard.component';
-import { AdminDashboardComponent } from './airline-dashboard/admin-dashboard/admin-dashboard.component';
-import { FlightstaffDashboardComponent } from './airline-dashboard/flightstaff-dashboard/flightstaff-dashboard.component';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from "@angular/material/list";
 import { LayoutModule } from '@angular/cdk/layout';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from "@angular/material/list";
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
-import { FlightService } from './services/flight.service';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { SocialLoginModule, GoogleLoginProvider, FacebookLoginProvider, SocialAuthServiceConfig } from 'angularx-social-login';
+import { environment } from 'src/environments/environment';
+import { AdminDashboardComponent } from './airline-dashboard/admin-dashboard/admin-dashboard.component';
 import { ManagePassengersComponent } from './airline-dashboard/admin-dashboard/manage-passengers/manage-passengers.component';
 import { ManageServicesComponent } from './airline-dashboard/admin-dashboard/manage-services/manage-services.component';
+import { AirlineDashboardComponent } from './airline-dashboard/airline-dashboard.component';
 import { CheckinComponent } from './airline-dashboard/flightstaff-dashboard/checkin/checkin.component';
+import { FlightstaffDashboardComponent } from './airline-dashboard/flightstaff-dashboard/flightstaff-dashboard.component';
 import { InflightComponent } from './airline-dashboard/flightstaff-dashboard/inflight/inflight.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { FlightService } from './services/flight.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent,
-    AirlineDashboardComponent,
     AdminDashboardComponent,
-    FlightstaffDashboardComponent,
-    ManagePassengersComponent,
-    ManageServicesComponent,
+    AirlineDashboardComponent,
+    AppComponent,
     CheckinComponent,
-    InflightComponent
+    FlightstaffDashboardComponent,
+    InflightComponent,
+    LoginComponent,
+    ManagePassengersComponent,
+    ManageServicesComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FlexLayoutModule,
-    ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatGridListModule,
-    MatMenuModule,
-    SocialLoginModule,
-    MatCardModule,
-    MatIconModule,
-    MatButtonModule,
+    BrowserModule,
+    FlexLayoutModule,
+    FormsModule,
+    HttpClientModule,
     LayoutModule,
+    MatButtonModule,
+    MatCardModule,
+    MatGridListModule,
+    MatIconModule,
     MatListModule,
+    MatMenuModule,
+    MatProgressSpinnerModule,
     MatTableModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    MatToolbarModule,
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    SocialLoginModule
   ],
   providers: [
     FlightService,

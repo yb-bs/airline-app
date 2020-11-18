@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Airline } from '../model/airline.model';
+import { Airport } from '../model/airport.model';
+import { AncillaryService } from '../model/ancillaryservice.model';
+import { SpecialMeal } from '../model/specialmeal.model';
+import { ShopItem } from '../model/shopitem.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,24 +21,24 @@ export class FlightService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getAllAirlines() {
-    return this.httpClient.get(this.REST_API_URL_ALL_AIRLINES);
+  public getAllAirlines(): Observable<Airline[]> {
+    return <Observable<Airline[]>>this.httpClient.get(this.REST_API_URL_ALL_AIRLINES);
   }
 
-  public getAllAirports() {
-    return this.httpClient.get(this.REST_API_URL_ALL_AIRPORTS);
+  public getAllAirports(): Observable<Airport[]> {
+    return <Observable<Airport[]>>this.httpClient.get(this.REST_API_URL_ALL_AIRPORTS);
   }
 
-  public getAllAncillaryServices() {
-    return this.httpClient.get(this.REST_API_URL_ALL_ANCILLARYSERVICES);
+  public getAllAncillaryServices(): Observable<AncillaryService[]> {
+    return <Observable<AncillaryService[]>>this.httpClient.get(this.REST_API_URL_ALL_ANCILLARYSERVICES);
   }
 
-  public getAllSpecialMeals() {
-    return this.httpClient.get(this.REST_API_URL_ALL_SPECIALMEALS);
+  public getAllSpecialMeals(): Observable<SpecialMeal[]> {
+    return <Observable<SpecialMeal[]>>this.httpClient.get(this.REST_API_URL_ALL_SPECIALMEALS);
   }
 
-  public getAllShopItems() {
-    return this.httpClient.get(this.REST_API_URL_ALL_SHOPITEMS);
+  public getAllShopItems(): Observable<ShopItem[]> {
+    return <Observable<ShopItem[]>>this.httpClient.get(this.REST_API_URL_ALL_SHOPITEMS);
   }
 
   public getAllFlights() {

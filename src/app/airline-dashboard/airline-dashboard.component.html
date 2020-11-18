@@ -1,2 +1,3 @@
-<app-admin-dashboard *ngIf="showAdminDashboard"></app-admin-dashboard>
-<app-flightstaff-dashboard *ngIf="showFlightStaffDashboard"></app-flightstaff-dashboard>
+
+<app-admin-dashboard [getFlightDetails]="getFlightDetailsFunction" *ngIf="showAdminDashboard"></app-admin-dashboard>
+<app-flightstaff-dashboard [getFlightDetails]="getFlightDetailsFunction" *ngIf="showFlightStaffDashboard"></app-flightstaff-dashboard>
