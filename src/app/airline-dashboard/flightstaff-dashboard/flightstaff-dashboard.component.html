@@ -42,17 +42,17 @@
     
       <ng-container matColumnDef="airline">
           <mat-header-cell *matHeaderCellDef>Airline</mat-header-cell>
-          <mat-cell *matCellDef="let flight">{{flight.airline}}</mat-cell>
+          <mat-cell *matCellDef="let flight">{{flight.airline.name}}</mat-cell>
       </ng-container>
     
       <ng-container matColumnDef="from">
           <mat-header-cell *matHeaderCellDef>From</mat-header-cell>
-          <mat-cell *matCellDef="let flight">{{flight.from}}</mat-cell>
+          <mat-cell *matCellDef="let flight">{{flight.from.name}}</mat-cell>
       </ng-container>
     
       <ng-container matColumnDef="to">
           <mat-header-cell *matHeaderCellDef>To</mat-header-cell>
-          <mat-cell *matCellDef="let flight">{{flight.to}}</mat-cell>
+          <mat-cell *matCellDef="let flight">{{flight.to.name}}</mat-cell>
       </ng-container>
     
       <ng-container matColumnDef="depTime">

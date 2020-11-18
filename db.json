@@ -31,6 +31,10 @@
         {
             "id": 2,
             "asName": "Wound care services"
+        },
+        {
+            "id": 3,
+            "asName": "Ventilator services"
         }
     ],
     "specialMeals": [
@@ -41,24 +45,32 @@
         {
             "id": 2,
             "mealName": "Gluten free"
+        },
+        {
+            "id": 3,
+            "mealName": "Vegetarian"
         }
     ],
     "shopItems": [
         {
             "id": 1,
-            "itemName": "Card pack"
+            "itemName": "Card pack",
+            "cost": 50
         },
         {
             "id": 2,
-            "itemName": "Fragrances"
+            "itemName": "Fragrances",
+            "cost": 250
         },
         {
             "id": 3,
-            "itemName": "Mask"
+            "itemName": "Mask",
+            "cost": 30
         },
         {
             "id": 4,
-            "itemName": "Watch"
+            "itemName": "Watch",
+            "cost": 100
         }
     ],
     "flights": [

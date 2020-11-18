@@ -1,13 +1,13 @@
 import { Time } from '@angular/common';
-import { Airline } from './airline.enum';
-import { Airport } from './airport.enum';
-import { AncillaryService } from './ancillaryservice.enum';
-import { ShopItem } from './shopitem.enum';
-import { SpecialMeal } from './specialmeal.enum';
+import { Airline } from './airline.model';
+import { Airport } from './airport.model';
+import { AncillaryService } from './ancillaryservice.model';
+import { ShopItem } from './shopitem.model';
+import { SpecialMeal } from './specialmeal.model';
 import { Passenger } from './passenger.model';
 
 export interface Flight {
-    // id: number,
+    id: number,
     pnr: string, 
     airline: Airline, 
     from: Airport, 

@@ -1,6 +1,6 @@
-import { AncillaryService } from './ancillaryservice.enum';
-import { ShopItem } from './shopitem.enum';
-import { SpecialMeal } from './specialmeal.enum';
+import { AncillaryService } from './ancillaryservice.model';
+import { ShopItem } from './shopitem.model';
+import { SpecialMeal } from './specialmeal.model';
 
 export interface Passenger {
     name: string, 
